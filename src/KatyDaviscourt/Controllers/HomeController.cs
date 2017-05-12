@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+using KatyDaviscourt.Models;
+using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace KatyDaviscourt.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: /<controller>/
         public IActionResult Index()
         {
             return View();
@@ -24,6 +26,12 @@ namespace KatyDaviscourt.Controllers
         public IActionResult Projects()
         {
             return View();
+        }
+
+        public IActionResult GetProjects(string returnedProjects)
+        {
+            var allProjects = Project.GetProjects(returnedProjects);
+            return Json(allProjects);
         }
     }
 }
