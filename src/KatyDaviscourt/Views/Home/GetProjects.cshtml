@@ -1,13 +1,23 @@
-﻿<div class="jumbotron jumbo-custom">
-    <h1>@Html.ActionLink("Katy Daviscourt", "Index")</h1>
-    <h2>Junior Web Developer</h2>
-</div>
-    </div>
-<div class="results">
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <br />
+<br />
+<br />
+<br />
+<div class="container">
+    <div class="results">
     @foreach (var project in Model)
     {
-        <p>Project: @project.Name</p>
-        <p>Programming Language Used: @project.Language</p>
-        <a href="@project.Html_Url">Check out the @project.Name repository!</a>
+        <div class="col-sm-7 project">
+            <div class="project-info">
+                <h2>Project: <strong>@project.Name</strong></h2>
+                <h4>Programming Language Used: @project.Language</h4>
+                <a href="@project.Html_Url">Check out the @project.Name repository!</a>
+            </div>
+        </div>
+        
     }
+    </div>
 </div>

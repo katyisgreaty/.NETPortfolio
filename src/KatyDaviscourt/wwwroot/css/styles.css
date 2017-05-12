@@ -32,28 +32,22 @@ h1 a:hover {
     margin-top: 50px;
 }
 
-/*.glasses {
-    width: 100vw;
-    height: auto;
-}
-
-.block {
-    margin-top: 880px;
-    z-index: 1;
-    text-align: center;
-    position: fixed;
-}*/
-
-/*.col-sm-4 {
-    margin-left: 10px;
-    margin-top: 90px;
-}
-
-.about-text2 {
-    margin-left: 290px;
-}*/
-
-
 .results {
     margin-top: 300px !important;
+}
+
+.project {
+    border: dotted pink 2px;
+    background-image: url("../img/comp.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 470px;
+    margin: 10px;
+    width: 40%;
+}
+
+.project-info {
+    width: 200px;
+    margin-top: 16%;
+    margin-left: 25%;
 }
