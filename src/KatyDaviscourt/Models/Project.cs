@@ -18,7 +18,7 @@ namespace KatyDaviscourt.Models
         public string Url { get; set; }
         public string Language { get; set; }
 
-        public static List<Project> GetProjects(string project)
+        public static JArray GetProjects(string project)
         {
             var client = new RestClient("https://api.github.com/users");
             var request = new RestRequest("katyisgreaty/starred", Method.GET);
@@ -31,12 +31,12 @@ namespace KatyDaviscourt.Models
             {
                 response = await GetResponseContentAsync(client, request) as RestResponse;
             }).Wait();
-            JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(response.Content);
+            var jsonResponse = JsonConvert.DeserializeObject<JArray>(response.Content);
             Console.WriteLine(jsonResponse);
             string jsonOutput = jsonResponse.ToString();
             var projectList = JsonConvert.DeserializeObject<List<Project>>(jsonOutput);
             Console.WriteLine(projectList[0]);
-            return projectList;
+            return jsonResponse;
         }
 
         public static Task<IRestResponse> GetResponseContentAsync(RestClient theClient, RestRequest theRequest)

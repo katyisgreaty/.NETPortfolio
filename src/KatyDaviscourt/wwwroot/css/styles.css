@@ -1,4 +1,39 @@
-﻿
+﻿body {
+}
+
 img {
     height: 600px;
+}
+
+
+h1 a {
+    color: #066e7b;
+}
+
+h1 a:hover {
+    color: #066e7b;
+    text-decoration: none;
+}
+
+.jumbo-custom {
+    text-align: center;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    position-top: 0px;
+}
+
+.move-body-down {
+    margin-top: 170px;
+}
+
+.glasses {
+    width: 170%;
+    height: auto;
+}
+
+.block {
+    z-index: 1;
+    text-align: center;
+    position: fixed;
 }
