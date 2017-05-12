@@ -24,15 +24,15 @@ h1 a:hover {
 }
 
 .move-body-down {
-    margin-top: 170px;
 }
 
 .glasses {
-    width: 170%;
+    width: 100vw;
     height: auto;
 }
 
 .block {
+    margin-top: 300px;
     z-index: 1;
     text-align: center;
     position: fixed;
