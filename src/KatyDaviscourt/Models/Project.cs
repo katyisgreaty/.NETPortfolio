@@ -18,25 +18,23 @@ namespace KatyDaviscourt.Models
         public string Url { get; set; }
         public string Language { get; set; }
 
-        public static JArray GetProjects(string project)
+        public static List<Project> GetProjects(string project)
         {
             var client = new RestClient("https://api.github.com/users");
             var request = new RestRequest("katyisgreaty/starred", Method.GET);
             request.AddHeader("Accept", "application/vnd.github.v3+json");
             request.AddHeader("User-Agent", "katyisgreaty");
-            Console.WriteLine("running");
-            Console.WriteLine(request);
             var response= new RestResponse();
             Task.Run(async () =>
             {
                 response = await GetResponseContentAsync(client, request) as RestResponse;
             }).Wait();
             var jsonResponse = JsonConvert.DeserializeObject<JArray>(response.Content);
-            Console.WriteLine(jsonResponse);
+            Console.WriteLine("JSON RESPONSE: " + jsonResponse);
             string jsonOutput = jsonResponse.ToString();
             var projectList = JsonConvert.DeserializeObject<List<Project>>(jsonOutput);
-            Console.WriteLine(projectList[0]);
-            return jsonResponse;
+            //Console.WriteLine(projectList[0]);
+            return projectList;
         }
 
         public static Task<IRestResponse> GetResponseContentAsync(RestClient theClient, RestRequest theRequest)

@@ -31,7 +31,7 @@ namespace KatyDaviscourt.Controllers
         public IActionResult GetProjects(string returnedProjects)
         {
             var allProjects = Project.GetProjects(returnedProjects);
-            return Json(allProjects);
+            return View(allProjects);
         }
     }
 }
