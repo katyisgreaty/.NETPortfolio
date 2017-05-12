@@ -10,6 +10,7 @@
     <div class="results">
     @foreach (var project in Model)
     {
+        <div class="row">
         <div class="col-sm-7 project">
             <div class="project-info">
                 <h2>Project: <strong>@project.Name</strong></h2>
@@ -17,7 +18,7 @@
                 <a href="@project.Html_Url">Check out the @project.Name repository!</a>
             </div>
         </div>
-        
+    </div>
     }
     </div>
 </div>

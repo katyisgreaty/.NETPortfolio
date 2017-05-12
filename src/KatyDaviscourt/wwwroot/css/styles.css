@@ -12,20 +12,33 @@ img {
 }
 
 h1 a {
-    color: #066e7b;
+    color: white;
+    font-size: 90px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
 
 h1 a:hover {
-    color: #066e7b;
+    color: #149096;
     text-decoration: none;
+   
+}
+h2 {
+    color: white;
 }
 
 .jumbo-custom {
     text-align: center;
-    background-color: white;
+    background-image: url("https://static.pexels.com/photos/172177/pexels-photo-172177.jpeg");
+    background-size: cover;
+    /*background-attachment: fixed;*/
+    background-position: center;
     position: fixed;
     width: 100%;
-    position-top: 0px;
+    z-index: 1;
+}
+.move-body-down {
+    margin-top: 300px;
 }
 
 .row {
@@ -37,12 +50,14 @@ h1 a:hover {
 }
 
 .project {
+    
     border: dotted pink 2px;
     background-image: url("../img/comp.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     height: 470px;
     margin: 10px;
+    margin-left: 29%;
     width: 40%;
 }
 
@@ -51,3 +66,8 @@ h1 a:hover {
     margin-top: 16%;
     margin-left: 25%;
 }
+
+font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Muli', sans-serif;
