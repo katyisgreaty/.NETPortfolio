@@ -20,8 +20,11 @@ namespace KatyDaviscourt.Models
 
         public static List<Project> GetProjects(string project)
         {
-            var client = new RestClient("https://api.github.com/users/katyisgreaty/starred");
-            var request = new RestRequest("", Method.GET);
+            var client = new RestClient("https://api.github.com/users");
+            var request = new RestRequest("katyisgreaty/starred", Method.GET);
+            request.AddHeader("Accept", "application/vnd.github.v3+json");
+            request.AddHeader("User-Agent", "katyisgreaty");
+            Console.WriteLine("running");
             Console.WriteLine(request);
             var response= new RestResponse();
             Task.Run(async () =>
