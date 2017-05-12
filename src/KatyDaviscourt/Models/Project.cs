@@ -16,6 +16,7 @@ namespace KatyDaviscourt.Models
         public int ProjectId { get; set; }
         public string Name { get; set; }
         public string Url { get; set; }
+        public string Html_Url { get; set; }
         public string Language { get; set; }
 
         public static List<Project> GetProjects(string project)

@@ -1,5 +1,13 @@
-﻿
-@foreach (var thing in Model)
-{
-    <p>@thing.Name, @thing.Language, @thing.Url</p>
-}
+﻿<div class="jumbotron jumbo-custom">
+    <h1>@Html.ActionLink("Katy Daviscourt", "Index")</h1>
+    <h2>Junior Web Developer</h2>
+</div>
+    </div>
+<div class="results">
+    @foreach (var project in Model)
+    {
+        <p>Project: @project.Name</p>
+        <p>Programming Language Used: @project.Language</p>
+        <a href="@project.Html_Url">Check out the @project.Name repository!</a>
+    }
+</div>
