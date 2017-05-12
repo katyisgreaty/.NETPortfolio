@@ -3,8 +3,12 @@
 
 img {
     height: 600px;
+
 }
 
+.about-img {
+    margin-top: 200px !important;
+}
 
 h1 a {
     color: #066e7b;
@@ -32,7 +36,7 @@ h1 a:hover {
 }
 
 .block {
-    margin-top: 300px;
+    margin-top: 800px;
     z-index: 1;
     text-align: center;
     position: fixed;
