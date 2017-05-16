@@ -1,7 +1,7 @@
 # .NETPortfolio
 
 
-#### _Use .NET and Github API to make a personal portfolio, 5.12.17_
+#### _Use .NET and Github API to make a personal portfolio, 5.12.17_ 
 
 #### By _**Katy Daviscourt**_
 
